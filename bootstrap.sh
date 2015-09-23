@@ -7,6 +7,6 @@ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /
 apt-get update
 apt-get install -y git mono-complete monodevelop-nunit monodevelop-versioncontrol > aptget.txt
 
-cd ~
+cd /home/vagrant
 git clone https://github.com/OpenSimian/opensimulator.git
 

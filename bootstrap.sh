@@ -7,17 +7,24 @@ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /
 apt-get update
 
 echo " Installing git..    check git.txt for log"
-apt-get install -y git 2> git.txt
+apt-get install -y git &> git.txt
 
 echo " Installing mono..    check mono.txt for log"
-apt-get install -y mono-complete 2> mono.txt
+apt-get install -y mono-complete &> mono.txt
 
 echo " Installing monodev nunuit..    check monodev-nu.txt for log"
-apt-get install -y monodevelop-nunit 2> monodev-nu.txt
+apt-get install -y monodevelop-nunit &> monodev-nu.txt
 
 echo " Installing monodev version control..    check monodev-vc.txt for log"
-apt-get install -y monodevelop-versioncontrol 2> monodev-vc.txt
+apt-get install -y monodevelop-versioncontrol &> monodev-vc.txt
+
+echo " Installing nant..    check nant.txt for log"
+apt-get install -y mono-complete &> nant.txt
 
 cd /home/vagrant
 git clone https://github.com/OpenSimian/opensimulator.git
+
+cd opensimulator
+./runprebuild.sh
+nant
 

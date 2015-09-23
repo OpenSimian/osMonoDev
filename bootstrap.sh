@@ -19,7 +19,7 @@ echo " Installing monodev version control..    check monodev-vc.txt for log"
 apt-get install -y monodevelop-versioncontrol &> monodev-vc.txt
 
 echo " Installing nant..    check nant.txt for log"
-apt-get install -y mono-complete &> nant.txt
+apt-get install -y nant &> nant.txt
 
 cd /home/vagrant
 git clone https://github.com/OpenSimian/opensimulator.git

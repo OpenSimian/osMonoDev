@@ -28,12 +28,12 @@ Vagrant with Virtualbox will create a shared directory where the  "Vagrant up" c
 OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, but you can use what you like.
 
 ### Load the osMonoDev recipe
-cd ~/VagrantBase
-git clone https://github.com/OpenSimian/osMonoDev.git  (This will create a subdirectory called  osMonoDev)
+ cd ~/VagrantBase
+ git clone https://github.com/OpenSimian/osMonoDev.git  (This will create a subdirectory called  osMonoDev)
 
 ### Start Me Up
-cd ~/VagrantBase/osMonoDev
-vagrant up
+ cd ~/VagrantBase/osMonoDev
+ vagrant up
 
 
 

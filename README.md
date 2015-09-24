@@ -29,7 +29,8 @@ OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, b
 
 ### Load the osMonoDev recipe
     cd ~/VagrantBase
-    git clone https://github.com/OpenSimian/osMonoDev.git  (This will create a subdirectory called  osMonoDev)
+    git clone https://github.com/OpenSimian/osMonoDev.git  
+This will create a subdirectory called  osMonoDev
 
 ### Start Me Up
     cd ~/VagrantBase/osMonoDev

@@ -26,7 +26,7 @@ echo " Installing nant..    check nant.txt for log"
 apt-get install -y nant &> InstallLogs/nant.txt
 
 # clone the base OpenSimulator GIT repository
-git clone -b 0.8.1-post-fixes https://github.com/OpenSimian/opensimulator.git
+git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
 
 # try a build
 cd opensimulator

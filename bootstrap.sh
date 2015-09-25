@@ -12,18 +12,23 @@ mkdir InstallLogs
 
 echo " Installing git..    check git.txt for log"
 apt-get install -y git &> InstallLogs/git.txt
+git --version
 
 echo " Installing mono..    check mono.txt for log"
+mono --version
 apt-get install -y mono-complete &> InstallLogs/mono.txt
+mono --version
 
 echo " Installing monodev nunuit..    check monodev-nu.txt for log"
 apt-get install -y monodevelop-nunit &> InstallLogs/monodev-nu.txt
 
 echo " Installing monodev version control..    check monodev-vc.txt for log"
 apt-get install -y monodevelop-versioncontrol &> InstallLogs/monodev-vc.txt
+monodevelop --version
 
 echo " Installing nant..    check nant.txt for log"
 apt-get install -y nant &> InstallLogs/nant.txt
+nant --version
 
 # clone the base OpenSimulator GIT repository
 git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git

@@ -34,7 +34,16 @@ nant --version
 git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
 
 # try a build
+# ensure access permissions
+chown -R vagrant opensimulator
+
+# build the solution file
 cd opensimulator
 ./runprebuild.sh
+
+# run nant build
 nant
+
+# invoke monodevelop
+monodevelop *.sln &
 

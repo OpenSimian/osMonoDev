@@ -41,5 +41,9 @@ The bootstrap processing will continue to load packages and clone the OpenSimula
 While that processing continues, a terminal window should open and start a [top] display.  
 Once the git clone process completes,  monodevelop should start and open the opensimulator solution file.
 
+## Stay in Synch
+Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.
+    cd ~/VagrantBase/osMonoDev
+    git pull
 
 

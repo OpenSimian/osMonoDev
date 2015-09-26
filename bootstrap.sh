@@ -7,7 +7,7 @@ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /
 # Update the repository package listings
 apt-get update  &> InstallLogs/aptUpdate.txt
 
-x-terminal-emulator -e top
+# x-terminal-emulator -e top
 
 # Install the base packages...  pipe the output to the InstallLogs directory
 mkdir InstallLogs

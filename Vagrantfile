@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.define "db" do |db|
     db.vm.box = "https://atlas.hashicorp.com/ubuntu/boxes/wily32"
-    dev.vm.provision :shell, path: "loadSQL.sh"
+    db.vm.provision :shell, path: "loadSQL.sh"
   end
 
 

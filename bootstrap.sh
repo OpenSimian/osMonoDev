@@ -5,7 +5,9 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BF
 echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
 
 # Update the repository package listings
-apt-get update
+apt-get update  &> InstallLogs/aptUpdate.txt
+
+x-terminal-emulator -e top
 
 # Install the base packages...  pipe the output to the InstallLogs directory
 mkdir InstallLogs

@@ -43,6 +43,7 @@ Once the git clone process completes,  monodevelop should start and open the ope
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.
+
     cd ~/VagrantBase/osMonoDev
     git pull
 

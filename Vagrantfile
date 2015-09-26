@@ -8,9 +8,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
-  config.vm.define "dev" do |dev|
-    dev.vm.box = "box-cutter/ubuntu1504-desktop"
-    dev.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.define "dev" do |default|
+    default.vm.box = "box-cutter/ubuntu1504-desktop"
+    default.vm.provision :shell, path: "bootstrap.sh"
   end
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.define "db" do |db|

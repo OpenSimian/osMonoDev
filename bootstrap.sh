@@ -15,7 +15,6 @@ apt-get install -y git &> InstallLogs/git.txt
 git --version
 
 echo " Installing mono..    check mono.txt for log"
-mono --version
 apt-get install -y mono-complete &> InstallLogs/mono.txt
 mono --version
 

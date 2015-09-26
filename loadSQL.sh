@@ -17,6 +17,8 @@ apt-get install -y mysql-server &> InstallLogs/mysql.txt
 
 apt-cache show mysql-server
 
+update-rc.d mysql defaults
 
+service mysql start
 
 

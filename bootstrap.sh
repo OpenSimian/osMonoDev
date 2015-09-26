@@ -32,8 +32,8 @@ apt-get install -y nant &> InstallLogs/nant.txt
 nant -help
 
 # clone the base OpenSimulator GIT repository ( uncomment the branch you want)
-git clone -b master https://github.com/nebadon2025/opensimulator.git
-# git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
+# git clone -b master https://github.com/nebadon2025/opensimulator.git
+git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
 
 # try a build
 # ensure access permissions

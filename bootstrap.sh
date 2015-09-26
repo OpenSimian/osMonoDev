@@ -29,7 +29,7 @@ monodevelop --version
 
 echo " Installing nant..    check nant.txt for log"
 apt-get install -y nant &> InstallLogs/nant.txt
-nant --version
+nant -help
 
 # clone the base OpenSimulator GIT repository ( uncomment the branch you want)
 git clone -b master https://github.com/nebadon2025/opensimulator.git

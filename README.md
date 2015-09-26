@@ -36,5 +36,10 @@ This will create a subdirectory called  osMonoDev
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
+You should see a Ubuntu desktop start in your new VM.  Remember, you are user vagrant, password vagrant.
+The bootstrap processing will continue to load packages and clone the OpenSimulator git repository.
+While that processing continues, a terminal window should open and start a [top] display.  
+Once the git clone process completes,  monodevelop should start and open the opensimulator solution file.
+
 
 

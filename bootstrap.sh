@@ -8,6 +8,7 @@ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /
 mkdir InstallLogs
 
 # Update the repository package listings
+echo " Updating repositories after Mono additions..    check aptUpgrade.txt for log"
 apt-get update  &> InstallLogs/aptUpdate.txt
 
 # x-terminal-emulator -e top

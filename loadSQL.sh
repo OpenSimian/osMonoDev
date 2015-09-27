@@ -2,7 +2,6 @@
 
 # Variables
 
-DBACCESS=192.168.42.221
 DBNAME=opensim
 DBUSER=osUser
 DBPASSWD=0p3ns1m1an
@@ -26,7 +25,7 @@ apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt
 
 apt-cache show mysql-server
 
-update-rc.d mysql defaults
+/sbin/iptables -A INPUT -i eth1 -s 192.168.42.0/24 -p tcp --destination-port 3306 -j ACCEPT
 
 service mysql start 
 

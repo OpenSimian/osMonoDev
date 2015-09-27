@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Variables
-DBBIND=192.168.42.222
+DBBIND=0.0.0.0
 DBNAME=opensim
 DBUSER=osUser
 DBPASSWD=0p3ns1m1an

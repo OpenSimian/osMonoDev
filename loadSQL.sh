@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Variables
-
+DBBIND=192.168.42.222
 DBNAME=opensim
 DBUSER=osUser
 DBPASSWD=0p3ns1m1an
@@ -27,6 +27,9 @@ apt-cache show mysql-server
 
 /sbin/iptables -I INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
 /sbin/iptables -I OUTPUT -p tcp --sport 3306 -m state --state ESTABLISHED -j ACCEPT
+
+echo "[mysqld]" >> /etc/mysql/my.cnf
+echo "bind-address = $DBBIND" >> /etc/mysql/my.cnf
 
 service mysql start 
 

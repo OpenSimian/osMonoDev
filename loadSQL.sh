@@ -39,3 +39,5 @@ mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'%' 
 
 
 /usr/sbin/update-rc.d mysql defaults
+
+/usr/sbin/mysqld --help --verbose

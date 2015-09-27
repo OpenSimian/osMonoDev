@@ -2,7 +2,7 @@
 
 # Variables
 
-DBHOST=localhost
+DBACCESS=192.168.42.221
 DBNAME=opensim
 DBUSER=osUser
 DBPASSWD=0p3ns1m1an
@@ -33,4 +33,4 @@ service mysql start
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
-mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
+mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'$DBACCESS' identified by '$DBPASSWD'"

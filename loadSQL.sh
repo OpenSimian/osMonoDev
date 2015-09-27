@@ -25,11 +25,8 @@ apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt
 
 apt-cache show mysql-server
 
-/sbin/iptables -A INPUT -i eth1 -s 192.168.42.0/24 -p tcp --destination-port 3306 -j ACCEPT
-
-echo "[mysqld]" >> /etc/mysql/my.cnf
-echo "bind-address    = *" >> /etc/mysql/my.cnf
-echo "#skip-networking" >> etc/mysql/my.cnf
+/sbin/iptables -I INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+/sbin/iptables -I OUTPUT -p tcp --sport 3306 -m state --state ESTABLISHED -j ACCEPT
 
 service mysql start 
 
@@ -38,3 +35,4 @@ mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'%' identified by '$DBPASSWD'"
 
 
+/usr/sbin/update-rc.d mysql defaults

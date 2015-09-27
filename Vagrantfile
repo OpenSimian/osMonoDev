@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/vivid32"
+    db.gui = true
     db.vm.provision :shell, path: "loadSQL.sh"
   end
 

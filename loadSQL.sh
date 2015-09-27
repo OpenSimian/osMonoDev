@@ -27,6 +27,10 @@ apt-cache show mysql-server
 
 /sbin/iptables -A INPUT -i eth1 -s 192.168.42.0/24 -p tcp --destination-port 3306 -j ACCEPT
 
+echo "[mysqld]" >> /etc/mysql/my.cnf
+echo "bind-address    = *" >> /etc/mysql/my.cnf
+echo "#skip-networking" >> etc/mysql/my.cnf
+
 service mysql start 
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"

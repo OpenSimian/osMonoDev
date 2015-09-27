@@ -25,8 +25,8 @@ apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt
 
 apt-cache show mysql-server
 
-/sbin/iptables -I INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
-/sbin/iptables -I OUTPUT -p tcp --sport 3306 -m state --state ESTABLISHED -j ACCEPT
+/sbin/iptables -i eth1 -I INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+/sbin/iptables -i eth1 -I OUTPUT -p tcp --sport 3306 -m state --state ESTABLISHED -j ACCEPT
 
 echo "[mysqld]" >> /etc/mysql/my.cnf
 echo "bind-address = $DBBIND" >> /etc/mysql/my.cnf

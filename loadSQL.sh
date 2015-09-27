@@ -29,7 +29,7 @@ apt-cache show mysql-server
 
 update-rc.d mysql defaults
 
-service mysql start
+service mysql start 
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"

@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "default" do |default|
     default.vm.box = "box-cutter/ubuntu1504-desktop"
-    db.vm.network "private_network", ip: "192.168.42.221"
+    default.vm.network "private_network", ip: "192.168.42.221"
     default.vm.provision :shell, path: "bootstrap.sh"
   end
   # Every Vagrant virtual environment requires a box to build off of.

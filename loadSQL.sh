@@ -21,9 +21,8 @@ apt-get update  &> InstallLogs/aptUpdate.txt
 # x-terminal-emulator -e top
 
 echo " Installing MySQL..    check mysql.txt for log"
-apt-get install -y mysql-server &> InstallLogs/mysql.txt
-
-sed -i "s/^bind-address/#bind-address/" /etc/mysql/my.cnf
+apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt
+# apt-get install build-essential zlib1g-dev git-core sqlite3 libsqlite3-dev
 
 apt-cache show mysql-server
 
@@ -33,4 +32,10 @@ service mysql start
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
-mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'$DBACCESS' identified by '$DBPASSWD'"
+mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'%' identified by '$DBPASSWD'"
+
+echo "bind-address = 0.0.0.0" >> /etc/mysql/my.cnf
+
+mysql stop
+
+mysql start

@@ -34,8 +34,4 @@ echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'%' identified by '$DBPASSWD'"
 
-echo "bind-address = 0.0.0.0" >> /etc/mysql/my.cnf
 
-mysql stop
-
-mysql start

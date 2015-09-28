@@ -75,6 +75,7 @@ There are no changes recommended,  just make sure the default file is renamed.
     mono OpenSim.exe
 
 On the inital startup you will be prompted for basic information about your first region.
+
     New region name []:  Home
     RegionUUID [06ecbda5....]:               [return to accept default]
     Region Location [1000,1000]:             [return to accept default]
@@ -90,9 +91,9 @@ On the inital startup you will be prompted for basic information about your firs
     UserID[]
 
 Your Terminal session is now acting as the simulator console...   Once all of the questions are answered   it should gie you a console promt like 
+
     Region (Home) # 
 
-   
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.

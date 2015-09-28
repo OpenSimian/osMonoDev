@@ -17,11 +17,14 @@ mkdir InstallLogs
 echo " Updating repositories ..    check aptUpgrade.txt for log"
 apt-get update  &> InstallLogs/aptUpdate.txt
 
-# x-terminal-emulator -e top
+echo " Installing zeroConf..    check zeroConf.txt for log"
+apt-get install avahi-daemon &> InstallLogs/zeroConf.txt
+echo " StartatBoot zeroConf..    "
+update-rc.d avahi-daemon defaults
+
 
 echo " Installing MySQL..    check mysql.txt for log"
 apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt
-# apt-get install build-essential zlib1g-dev git-core sqlite3 libsqlite3-dev
 
 apt-cache show mysql-server
 

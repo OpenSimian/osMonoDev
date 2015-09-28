@@ -1,6 +1,6 @@
 ## Overview
 
-OsMonoDev is designed to simplify the creation of Ubuntu VM's configured to support the creation of a small OpenSimulator standalone grid.  It uses a Vagrant recipe to provision a Ubuntu desktop virtual machine loaded with monodevelop to allow developers to hack a clone of any OpenSimulator branch.  It also configures an Ubuntu server configured as a MySQL server for any of the OpenSimulator servers started on the local network.
+OsMonoDev is designed to simplify the creation of Ubuntu VM's configured to support the creation of a small OpenSimulator standalone grid.  It uses a Vagrant recipe to provision a Ubuntu desktop virtual machine loaded with monodevelop and a clone of any OpenSimulator branch.  It also configures an Ubuntu server configured as a MySQL server for any of the OpenSimulator servers started on the local network.
 
 osMonoDev currently requires the following freely available software.
 * VirtualBox ( [www.virtualbox](https://www.virtualbox.org/) )
@@ -31,6 +31,9 @@ OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, b
     cd ~/VagrantBase
     git clone https://github.com/OpenSimian/osMonoDev.git  
 This will create a subdirectory called  osMonoDev
+
+### Customize the branch of OpenSimulator
+
 
 ### Start Me Up
     cd ~/VagrantBase/osMonoDev

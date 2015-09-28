@@ -33,7 +33,14 @@ OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, b
 This will create a subdirectory called  osMonoDev
 
 ### Customize the branch of OpenSimulator
+Edit the loadDEV.sh and find the following section.
 
+    # clone the base OpenSimulator GIT repository ( uncomment the branch you want)
+    # git clone -b master https://github.com/nebadon2025/opensimulator.git
+    git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
+    
+You are responisible for insuring that the branch is actually available in the repository selected.
+The examples allow you to clone the lastest production release [0.8.1-post-fixes], or master.
 
 ### Start Me Up
     cd ~/VagrantBase/osMonoDev

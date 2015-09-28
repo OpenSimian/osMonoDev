@@ -36,13 +36,13 @@ nant -help
 # git clone -b master https://github.com/nebadon2025/opensimulator.git
 git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
 
-# try a build
-# ensure access permissions
-chown -R vagrant opensimulator
-
 # build the solution file
 cd opensimulator
 ./runprebuild.sh
+
+# try a build
+# ensure access permissions
+chown -R vagrant ../opensimulator
 
 # run nant build
 nant

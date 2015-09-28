@@ -44,7 +44,7 @@ Log in to the DEV VM and connect to the base directory ( probably ~/opensimulato
     cd ~/opensimulator
     monodevelop OpenSim.sln
 
-Build the OpenSim project, run the unit tests,  configure the INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.
+Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.

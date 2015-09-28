@@ -36,6 +36,7 @@ apt-cache show mysql-server
 echo "[mysqld]" >> /etc/mysql/my.cnf
 echo "bind-address = $DBBIND" >> /etc/mysql/my.cnf
 
+service mysql stop 
 service mysql start 
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"

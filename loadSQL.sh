@@ -22,6 +22,8 @@ apt-get install -y avahi-daemon avahi-discover &> InstallLogs/zeroConf.txt
 echo " StartatBoot zeroConf..    "
 update-rc.d avahi-daemon defaults
 
+echo " Installing nmap..    check nmap.txt for log"
+apt-get install -y nmap &> InstallLogs/nmap.txt
 
 echo " Installing MySQL..    check mysql.txt for log"
 apt-get install -y mysql-server  mysql-client &> InstallLogs/mysql.txt

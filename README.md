@@ -4,10 +4,10 @@ OsMonoDev is designed to simplify the creation and management of Ubuntu VM's pre
 It uses a Vagrant recipe to provision a Ubuntu 15.04 desktop virtual machine through Virtualbox.  Once the VM is created,
 it is loaded with the packages and source code to allow developers to edit the OpenSimian clone of OpenSimulator. 
 
-Opensimian Grid Manager currently requires the following freely available software.
-* Ubuntu Desktop (LTS and current versions) ( [www.ubuntu](https://www.ubuntu.com/) )
+osMonoDev currently requires the following freely available software.
 * VirtualBox ( [www.virtualbox](https://www.virtualbox.org/) )
 * Vagrant ( [www.vagrantup](https://www.vagrantup.com/) )
+* Ubuntu server (LTS and current versions) ( [www.ubuntu](https://www.ubuntu.com/) )
 * Git  ( [www.git](https://nodejs.org/) )
 * OpenSimulator   ( [www.opensimulator](http://www.opensimulator.org/) )
 * Mono   ( [www.mono](http://www.mono-project.com/) )
@@ -17,10 +17,10 @@ Opensimian Grid Manager currently requires the following freely available softwa
 ## Getting Started
 These instructions presume that the user has install rights on a current 64 bit machine (& OS) with multiple CPUs and enough memory/disk storage to support running a VM.
 
-### Install VirtualBox
+### Install VirtualBox on the host machine
  ( [Ubuntu Install Instructions](https://help.ubuntu.com/community/VirtualBox/Installation) )
 
-### Install Vagrant
+### Install Vagrant on the host machine
  ( [Vagrant Download](http://www.vagrantup.com/downloads) )
 
 ### Set Vagrant Project Directory
@@ -36,9 +36,11 @@ This will create a subdirectory called  osMonoDev
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
-You should see a Ubuntu desktop start in your new VM.  Remember, you are user vagrant, password vagrant.
+Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM.  
+Remember, you are user vagrant, password vagrant.
+
 The bootstrap processing will continue to load packages and clone the OpenSimulator git repository.
-While that processing continues, a terminal window should open and start a [top] display.  
+ 
 Once the git clone process completes,  monodevelop should start and open the opensimulator solution file.
 
 ## Stay in Synch

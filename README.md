@@ -39,6 +39,13 @@ This will create a subdirectory called  osMonoDev
 Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server. It will then install mySQL and initialize a database for OpenSimulator servers to connect to.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and loaded with source from an opensimulator GIT repository to allow source code modifications and building the project. 
 Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL user is set as osUser with password 0p3ns1m1an.
 
+### Build and Configure
+Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).  
+    cd ~/opensimulator
+    monodevelop OpenSim.sln
+
+Build the OpenSim project, run the unit tests,  configure the INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.
+
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.
 

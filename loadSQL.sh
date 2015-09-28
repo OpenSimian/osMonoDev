@@ -18,7 +18,7 @@ echo " Updating repositories ..    check aptUpgrade.txt for log"
 apt-get update  &> InstallLogs/aptUpdate.txt
 
 echo " Installing zeroConf..    check zeroConf.txt for log"
-apt-get install -y avahi-daemon &> InstallLogs/zeroConf.txt
+apt-get install -y avahi-daemon nmap &> InstallLogs/zeroConf.txt
 echo " StartatBoot zeroConf..    "
 update-rc.d avahi-daemon defaults
 

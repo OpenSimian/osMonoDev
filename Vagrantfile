@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/vivid32"
-    db.vm.hostname = "mySQLsrv"
+    db.vm.hostname = "osdev"
     db.vm.network "private_network", ip: "192.168.42.222"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
@@ -19,8 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "default" do |default|
     default.vm.box = "box-cutter/ubuntu1504-desktop"
+    default.vm.hostname = "mySQLsrv"
     default.vm.network "private_network", ip: "192.168.42.221"
-    default.vm.provision :shell, path: "bootstrap.sh"
+    default.vm.provision :shell, path: "loadDEV.sh"
   end
   # Every Vagrant virtual environment requires a box to build off of.
 

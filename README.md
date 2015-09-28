@@ -1,17 +1,17 @@
 ## Overview
 
-OsMonoDev is designed to simplify the creation and management of Ubuntu VM's preloaded with OpenSimulator and MonoDevelop
-It uses a Vagrant recipe to provision a Ubuntu 15.04 desktop virtual machine through Virtualbox.  Once the VM is created,
-it is loaded with the packages and source code to allow developers to edit the OpenSimian clone of OpenSimulator. 
+OsMonoDev is designed to simplify the creation of Ubuntu VM's configured to support the creation of a small OpenSimulator standalone grid.  It uses a Vagrant recipe to provision a Ubuntu 15.04 desktop virtual machine loaded with monodevelop to allow developers to hack a clone of any OpenSimulator branch.  It also configures an Ubuntu server configured as a MySQL server for any of the OpenSimulator servers started on the local network.
 
 osMonoDev currently requires the following freely available software.
 * VirtualBox ( [www.virtualbox](https://www.virtualbox.org/) )
 * Vagrant ( [www.vagrantup](https://www.vagrantup.com/) )
-* Ubuntu server (LTS and current versions) ( [www.ubuntu](https://www.ubuntu.com/) )
+* Ubuntu Desktop & Server(LTS and current versions) ( [www.ubuntu](https://www.ubuntu.com/) )
 * Git  ( [www.git](https://nodejs.org/) )
 * OpenSimulator   ( [www.opensimulator](http://www.opensimulator.org/) )
 * Mono   ( [www.mono](http://www.mono-project.com/) )
 * MonoDevelop   ( [www.monodevelop](http://www.monodevelop.com/) )
+* Nant   ( [www.nant](http://nant.sourceforge.net/) )
+* Avahi   ( [www.avahi](http://www.avahi.org/) )
 
 
 ## Getting Started
@@ -36,12 +36,8 @@ This will create a subdirectory called  osMonoDev
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
-Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM.  
-Remember, you are user vagrant, password vagrant.
-
-The bootstrap processing will continue to load packages and clone the OpenSimulator git repository.
- 
-Once the git clone process completes,  monodevelop should start and open the opensimulator solution file.
+Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server. It will then install mySQL and initialize a database for OpenSimulator servers to connect to.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and loaded with source from an opensimulator GIT repository to allow source code modifications and building the project. 
+Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL user is set as osUser with password 0p3ns1m1an.
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.

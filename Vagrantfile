@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   
-  config.vm.define "default"  primary do |default|
+  config.vm.define "default" do |default|
     default.vm.box = "box-cutter/ubuntu1504-desktop"
 #    default.vm.network "private_network", ip: "192.168.42.221"
     default.vm.network "public_network", ip: "192.168.42.222"

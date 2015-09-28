@@ -48,7 +48,20 @@ Log in to the DEV VM and connect to the base directory ( probably ~/opensimulato
     cd ~/opensimulator
     monodevelop OpenSim.sln
 
-Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.
+Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running.
+#### OpenSim.ini file
+    BaseURL = http://192.168.42.221
+    PublicPort = "9000"
+    physics = OpenDynamicsEngine     [used for internal testing @ OpenSimian]
+    enable_windlight = true          [becuase we like to share the  good looks]
+    AllowOSFunctions = true          [theres good stuff there, we want to use it]
+    OSFunctionThreatLevel = Severe   [Yes  ALL the good stuff... Dont' be scared]
+    ScriptDelayFactor = 0.2          [We dont want to wait]
+    ScriptDistanceLimitFactor = 25.0 [We like to build BIG linked objects]
+    SensorMaxRange = 256.0           [Find things in all but the farthest corners]
+    SensorMaxResults = 32            [Return  a BIG list]
+    Enabled = true                   [In the NPC section -- needs a better name  eh?]
+    Include-Architecture = "config-include/Standalone.ini"
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.

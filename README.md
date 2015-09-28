@@ -48,7 +48,8 @@ Log in to the DEV VM and connect to the base directory ( probably ~/opensimulato
     cd ~/opensimulator
     monodevelop OpenSim.sln
 
-Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running.
+Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running, and some optional setting changes we like to make.
+
 #### OpenSim.ini file
     BaseURL = http://192.168.42.221
     PublicPort = "9000"
@@ -62,6 +63,36 @@ Build the OpenSim project, run the unit tests,  configure the STANDALONE INI fil
     SensorMaxResults = 32            [Return  a BIG list]
     Enabled = true                   [In the NPC section -- needs a better name  eh?]
     Include-Architecture = "config-include/Standalone.ini"
+#### StandaloneCommon.ini file  [in config-include]
+    StorageProvider = "OpenSim.Data.MySQL.dll"
+    ConnectionString = "Data Source=mysqlsrv.local;Database=opensim;User ID=osUser;Password=0p3ns1m1an;Old Guids=true;"
+    gridname = "OpenSimian MonoDev Test"
+    gridnick = "osMonoDev"
+#### FlotsamCache.ini
+There are no changes recommended,  just make sure the default file is renamed.
+
+   cd ~/opensimulator/bin
+   mono OpenSim.exe
+
+On the inital startup you will be prompted for basic information about your first region.
+   New region name []:  Home
+   RegionUUID [06ecbda5....]:               [return to accept default]
+   Region Location [1000,1000]:             [return to accept default]
+   Internal IP address [0.0.0.0]:
+   Internal port [9000]:
+   Allow alternate ports [False]: 
+   External host name [SYSTEMIP]: 
+   New estate name [My Estate]:  OpenSimian
+   Estate owner first name [Test]:  Ruth
+   Estate owner last name [User]:   OnADot
+   Password:                        LetMeIn
+   email:
+   UserID[]
+
+Your Terminal session is now acting as the simulator console...   Once all of the questions are answered   it should gie you a console promt like 
+    Region (Home) # 
+
+   
 
 ## Stay in Synch
 Once you have completed the clone of the osMonoDev repository it is easy to stay up to date.

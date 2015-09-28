@@ -71,23 +71,23 @@ Build the OpenSim project, run the unit tests,  configure the STANDALONE INI fil
 #### FlotsamCache.ini
 There are no changes recommended,  just make sure the default file is renamed.
 
-   cd ~/opensimulator/bin
-   mono OpenSim.exe
+    cd ~/opensimulator/bin
+    mono OpenSim.exe
 
 On the inital startup you will be prompted for basic information about your first region.
-   New region name []:  Home
-   RegionUUID [06ecbda5....]:               [return to accept default]
-   Region Location [1000,1000]:             [return to accept default]
-   Internal IP address [0.0.0.0]:
-   Internal port [9000]:
-   Allow alternate ports [False]: 
-   External host name [SYSTEMIP]: 
-   New estate name [My Estate]:  OpenSimian
-   Estate owner first name [Test]:  Ruth
-   Estate owner last name [User]:   OnADot
-   Password:                        LetMeIn
-   email:
-   UserID[]
+    New region name []:  Home
+    RegionUUID [06ecbda5....]:               [return to accept default]
+    Region Location [1000,1000]:             [return to accept default]
+    Internal IP address [0.0.0.0]:
+    Internal port [9000]:
+    Allow alternate ports [False]: 
+    External host name [SYSTEMIP]: 
+    New estate name [My Estate]:  OpenSimian
+    Estate owner first name [Test]:  Ruth
+    Estate owner last name [User]:   OnADot
+    Password:                        LetMeIn
+    email:
+    UserID[]
 
 Your Terminal session is now acting as the simulator console...   Once all of the questions are answered   it should gie you a console promt like 
     Region (Home) # 

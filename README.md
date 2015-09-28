@@ -40,7 +40,8 @@ Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut ser
 Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL user is set as osUser with password 0p3ns1m1an.
 
 ### Build and Configure
-Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).  
+Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).
+
     cd ~/opensimulator
     monodevelop OpenSim.sln
 

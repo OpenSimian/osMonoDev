@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/vivid32"
+    db.vm.hostname = "mySQLsrv"
     db.vm.network "private_network", ip: "192.168.42.222"
     db.vm.provision :shell, path: "loadSQL.sh"
   end

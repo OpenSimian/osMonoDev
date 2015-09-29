@@ -14,7 +14,10 @@ cp /usr/share/zoneinfo/Navajo /etc/localtime
 echo " Updating repositories after Mono additions..    check aptUpgrade.txt for log"
 apt-get update  &> InstallLogs/aptUpdate.txt
 
-# x-terminal-emulator -e top
+echo " Installing zeroConf..    check zeroConf.txt for log"
+apt-get install -y avahi-daemon avahi-discover &> InstallLogs/zeroConf.txt
+echo " StartatBoot zeroConf..    "
+update-rc.d avahi-daemon defaults
 
 echo " Installing git..    check git.txt for log"
 apt-get install -y git &> InstallLogs/git.txt

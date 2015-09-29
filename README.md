@@ -15,7 +15,7 @@ osMonoDev currently requires the following freely available software.
 
 
 ## Getting Started
-These instructions presume that the user has install rights on a current 64 bit machine (& OS) with multiple CPUs and enough memory/disk storage to support running a VM.
+These instructions presume that the user has install rights on a current 64 bit machine (& OS) with multiple CPUs and enough memory/disk storage to support running 2 additional VM's.
 
 ### Install VirtualBox on the host machine
  ( [Ubuntu Install Instructions](https://help.ubuntu.com/community/VirtualBox/Installation) )

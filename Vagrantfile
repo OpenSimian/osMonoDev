@@ -22,6 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.hostname = "osdev"
     dev.vm.network "private_network", type: "dhcp"
     dev.vm.provision :shell, path: "loadDEV.sh"
+    dev.vm.synced_folder "../gitclones/opensimulator", "/opensimulator"
+    dev.vm.synced_folder "../gitclones/openmetaverse", "/openmetaverse"
   end
 
 end

@@ -21,6 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.box = "box-cutter/ubuntu1404-desktop"
     dev.vm.hostname = "osdev"
     dev.vm.network "private_network", type: "dhcp"
+    dev.vm.network "forwarded_port", guest: 9000, host: 9000, protocol: 'tcp'
+    dev.vm.network "forwarded_port", guest: 9000, host: 9000, protocol: 'udp'
     dev.vm.provision :shell, path: "loadDEV.sh"
     dev.vm.synced_folder "../gitclones/opensimulator", "/opensimulator"
     dev.vm.synced_folder "../gitclones/openmetaverse", "/openmetaverse"

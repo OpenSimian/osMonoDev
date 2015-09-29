@@ -7,6 +7,9 @@ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /
 # Install the base packages...  pipe the output to the InstallLogs directory
 mkdir InstallLogs
 
+# Set the local timezone and start to synch time so timestamps between vms are close
+cp /usr/share/zoneinfo/Navajo /etc/localtime
+
 # Update the repository package listings
 echo " Updating repositories after Mono additions..    check aptUpgrade.txt for log"
 apt-get update  &> InstallLogs/aptUpdate.txt

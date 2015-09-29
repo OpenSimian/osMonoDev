@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 #  configure desktop VM with MonoDevelop and OpenSimulator branch clone with shell script   
-  config.vm.define "default" do |dev|
+  config.vm.define "dev" do |dev|
     dev.vm.box = "box-cutter/ubuntu1504-desktop"
     dev.vm.hostname = "osdev"
     dev.vm.network "private_network", type: "dhcp"

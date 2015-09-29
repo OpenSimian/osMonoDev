@@ -12,16 +12,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/vivid32"
     db.vm.hostname = "mySQLsrv"
-    db.vm.network "private_network", ip: "192.168.42.222"
+    db.vm.network "private_network", type: "dhcp"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
 
 #  configure desktop VM with MonoDevelop and OpenSimulator branch clone with shell script   
-  config.vm.define "default" do |default|
-    default.vm.box = "box-cutter/ubuntu1504-desktop"
-    default.vm.hostname = "osdev"
-    default.vm.network "private_network", ip: "192.168.42.221"
-    default.vm.provision :shell, path: "loadDEV.sh"
+  config.vm.define "default" do |dev|
+    dev.vm.box = "box-cutter/ubuntu1504-desktop"
+    dev.vm.hostname = "osdev"
+    dev.vm.network "private_network", type: "dhcp"
+    dev.vm.provision :shell, path: "loadDEV.sh"
   end
 
 end

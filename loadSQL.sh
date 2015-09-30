@@ -6,7 +6,7 @@ DBNAME=opensim
 DBUSER=osUser
 DBPASSWD=0p3ns1m1an
 
-echo -e "\n--- Install MySQL specific packages and settings ---\n"
+echo -e "\n--- Install MySQL specific repositories so apt-get returns latest ---\n"
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections
 

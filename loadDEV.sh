@@ -15,7 +15,7 @@ echo " Updating repositories after Mono additions..    check aptUpgrade.txt for 
 apt-get update  &> InstallLogs/aptUpdate.txt
 
 echo " Installing zeroConf..    check zeroConf.txt for log"
-apt-get install -y avahi-daemon avahi-discover &> InstallLogs/zeroConf.txt
+apt-get install -y avahi-daemon avahi-dnsconfd avahi-discover avahi-utils &> InstallLogs/zeroConf.txt
 echo " StartatBoot zeroConf..    "
 update-rc.d avahi-daemon defaults
 

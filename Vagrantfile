@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #  configure mySQL database server VM and initialize with shell script 
   config.vm.define "db" do |db|
-    db.vm.box = "dz0/wiley64SQL "
+    db.vm.box = "dz0/vivid64srv"
     db.vm.hostname = "mySQLsrv"
     db.vm.network "private_network", type: "dhcp"
     db.vm.provision :shell, path: "loadSQL.sh"

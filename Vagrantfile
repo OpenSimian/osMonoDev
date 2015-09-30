@@ -10,10 +10,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #  configure mySQL database server VM and initialize with shell script 
   config.vm.define "db" do |db|
-    db.vm.box = "dz0/vivid64srv"
+    db.vm.box = "dz0/vivid32srv"
     db.vm.hostname = "mySQLsrv"
     db.vm.network "private_network", type: "dhcp"
-    db.vm.provision :shell, path: "loadSQL.sh"
+#    db.vm.provision :shell, path: "loadSQL.sh"
   end
 
 #  configure desktop VM with MonoDevelop and OpenSimulator branch clone with shell script   

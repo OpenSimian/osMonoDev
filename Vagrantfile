@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.network "private_network", type: "dhcp"
     dev.vm.provision :shell, path: "loadDEV.sh"
     dev.vm.synced_folder "../gitclones", "/gitclones"
-    dev.vm.synced_foloder "../OSviewers", "/viewers"
+    dev.vm.synced_folder "../OSviewers", "/viewers"
     dev.vm.synced_folder "../OSAssets", "/assets"
     
   end

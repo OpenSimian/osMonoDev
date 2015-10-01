@@ -7,16 +7,23 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  
+  config.vm.provider :virtualbox do |vb|
+    # change the network card hardware for better performance
+    vb.customize ["modifyvm", :id, "--nictype1", "virtio" ]
+    vb.customize ["modifyvm", :id, "--nictype2", "virtio" ]
+
+    # suggested fix for slow network performance
+    # see https://github.com/mitchellh/vagrant/issues/1807
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
 
 #  configure mySQL database server VM and initialize with shell script 
   config.vm.define "db" do |db|
     db.vm.box = "dz0/vivid32srv"
     db.vm.hostname = "mySQLsrv"
-    
-# change the network card hardware for better performance
-    db.customize ["modifyvm", :id, "--nictype1", "virtio" ]
-    db.customize ["modifyvm", :id, "--nictype2", "virtio" ]
-    
+    db.name = "mySQLsrv"
     db.vm.network "private_network", type: "dhcp"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
@@ -25,6 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "dev" do |dev|
     dev.vm.box = "box-cutter/ubuntu1404-desktop"
     dev.vm.hostname = "osdev"
+    db.name = "osdev"
     dev.vm.network "private_network", type: "dhcp"
     dev.vm.provision :shell, path: "loadDEV.sh"
     dev.vm.synced_folder "../gitclones", "/gitclones"

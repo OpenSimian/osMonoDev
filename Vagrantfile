@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "db" do |db|
     db.vm.box = "dz0/vivid32srv"
     db.vm.hostname = "mySQLsrv"
-    db.vm.network "private_network", type: "dhcp"
+    db.vm.network "private_network", type: "dhcp",virtualbox__intnet: "VBintNet"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
 
@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "dev" do |dev|
     dev.vm.box = "box-cutter/ubuntu1404-desktop"
     dev.vm.hostname = "osdev"
-    dev.vm.network "private_network", type: "dhcp"
+    dev.vm.network "private_network", type: "dhcp",virtualbox__intnet: "VBintNet"
     dev.vm.network "forwarded_port", guest: 9000, host: 9000, protocol: 'tcp'
     dev.vm.network "forwarded_port", guest: 9000, host: 9000, protocol: 'udp'
     dev.vm.provision :shell, path: "loadDEV.sh"

@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "db" do |db|
     db.vm.box = "dz0/vivid32srv"
     db.vm.hostname = "mySQLsrv"
-    db.vm.name = "mySQLsrv"
+
     db.vm.network "private_network", type: "dhcp"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "dev" do |dev|
     dev.vm.box = "box-cutter/ubuntu1404-desktop"
     dev.vm.hostname = "osdev"
-    dev.vm.name = "osdev"
+
     dev.vm.network "private_network", type: "dhcp"
     dev.vm.provision :shell, path: "loadDEV.sh"
     dev.vm.synced_folder "../gitclones", "/gitclones"

@@ -23,6 +23,9 @@ These instructions presume that the user has install rights on a current 64 bit 
 ### Install Vagrant on the host machine
  ( [Vagrant Download](http://www.vagrantup.com/downloads) )
 
+### Install Git on the host machine
+ ( [Ubuntu Install](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04) )
+
 ### Setup the Vagrant Project Directory
 Vagrant with Virtualbox will create a shared directory where the  "Vagrant up" command is executed.
 OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, but you can use what you like.

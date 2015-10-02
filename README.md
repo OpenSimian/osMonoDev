@@ -42,11 +42,11 @@ Edit the loadDEV.sh and find the following section.
 You are responisible for insuring that the branch is actually available in the repository selected.
 The examples allow you to clone the lastest production release [0.8.1-post-fixes], or master.
 
-### Start Me Up
+### Start the Virtual Machines
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
-Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server. It will then install mySQL and initialize a database for OpenSimulator servers to connect to.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and loaded with source from an opensimulator GIT repository to allow source code modifications and building the project. 
+Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server with mySQL and a database for OpenSimulator initialized.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and loaded with source from an opensimulator GIT repository to allow source code modifications and building the project. 
 Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL user is set as osUser with password 0p3ns1m1an.
 
 ### Build and Configure
@@ -80,6 +80,8 @@ There are no changes recommended,  just make sure the default file is renamed.
 
     cd ~/opensimulator/bin
     mono OpenSim.exe
+
+### Start the Region simulation
 
 On the inital startup you will be prompted for basic information about your first region.
 

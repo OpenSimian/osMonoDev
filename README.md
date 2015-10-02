@@ -17,13 +17,14 @@ osMonoDev currently requires the following freely available software.
 ## Getting Started
 These instructions presume that the user has install rights on a current 64 bit machine (& OS) with multiple CPUs and enough memory/disk storage to support running 2 additional VM's.
 
-### Install VirtualBox on the host machine
+### Install Packages on the host machine
+#### VirtualBox
  ( [Ubuntu Install Instructions](https://help.ubuntu.com/community/VirtualBox/Installation) )
 
-### Install Vagrant on the host machine
+#### Vagrant
  ( [Vagrant Download](http://www.vagrantup.com/downloads) )
 
-### Install Git on the host machine
+#### Git
  ( [Ubuntu Install](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04) )
 
 ### Setup the Vagrant Project Directory

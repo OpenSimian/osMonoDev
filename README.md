@@ -72,7 +72,7 @@ Log in to the DEV VM and connect to the base directory ( probably ~/opensimulato
 Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running, and some optional setting changes we like to make.
 
 #### OpenSim.ini file
-    BaseURL = http://192.168.42.221
+    BaseURL = http://osdev.local
     PublicPort = "9000"
     physics = OpenDynamicsEngine     [used for internal testing @ OpenSimian]
     enable_windlight = true          [becuase we like to share the  good looks]

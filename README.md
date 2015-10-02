@@ -23,26 +23,36 @@ These instructions presume that the user has install rights on a current 64 bit 
 ### Install Vagrant on the host machine
  ( [Vagrant Download](http://www.vagrantup.com/downloads) )
 
-### Set Vagrant Project Directory
+### Setup the Vagrant Project Directory
 Vagrant with Virtualbox will create a shared directory where the  "Vagrant up" command is executed.
 OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, but you can use what you like.
 
-### Load the osMonoDev recipe
-    cd ~/VagrantBase
-    git clone https://github.com/OpenSimian/osMonoDev.git  
-This will create a subdirectory called  osMonoDev
-
 ### Customize the branch of OpenSimulator
-Edit the loadDEV.sh and find the following section.
+The source code you will be working with is loaded on the host machine via git clone.
+
+    cd ~/VagrantBase
+    mkdir gitclones
+    cd gitclones
+
+The directory containing the .git file will be shared so both host and VM have access to the working/build base.  Execute the clone command in the ~/VagrantBase/gitclones directory to insure  proper  sharing.
 
     # clone the base OpenSimulator GIT repository ( uncomment the branch you want)
     # git clone -b master https://github.com/nebadon2025/opensimulator.git
     git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
-    
+
 You are responisible for insuring that the branch is actually available in the repository selected.
 The examples allow you to clone the lastest production release [0.8.1-post-fixes], or master.
 
+### Load the osMonoDev recipe
+
+    cd ~/VagrantBase
+    git clone https://github.com/OpenSimian/osMonoDev.git  
+
+This will create a subdirectory called  osMonoDev
+
+
 ### Start the Virtual Machines
+
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
@@ -52,7 +62,7 @@ Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL
 ### Build and Configure
 Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).
 
-    cd ~/opensimulator
+    cd ~/gitclones/opensimulator
     monodevelop OpenSim.sln
 
 Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running, and some optional setting changes we like to make.
@@ -78,10 +88,11 @@ Build the OpenSim project, run the unit tests,  configure the STANDALONE INI fil
 #### FlotsamCache.ini
 There are no changes recommended,  just make sure the default file is renamed.
 
-    cd ~/opensimulator/bin
+### Start the Region simulation
+
+    cd ~/gitclones/opensimulator/bin
     mono OpenSim.exe
 
-### Start the Region simulation
 
 On the inital startup you will be prompted for basic information about your first region.
 

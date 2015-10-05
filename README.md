@@ -60,14 +60,17 @@ This will create a subdirectory called  osMonoDev
     cd ~/VagrantBase/osMonoDev
     vagrant up
 
-Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server with mySQL and a database for OpenSimulator initialized.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and loaded with source from an opensimulator GIT repository to allow source code modifications and building the project. 
+Vagrant will follow the recipe and ask VirtualBox to download/load an Ubunut server VM for the database server with mySQL and a database for OpenSimulator initialized.  A second VM will be created from an Ubuntu desktop image.  This VM will be configured with MonoDevelop and links to the opensimulator GIT repository on the hostto allow source code modifications and building the project. 
 Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL user is set as osUser with password 0p3ns1m1an.
 
 ### Build and Configure
 Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).
 
-    cd ~/gitclones/opensimulator
-    monodevelop OpenSim.sln
+    cd ~/gitclones/opensimulator/bin
+    ./runprebuild.sh
+    
+    xbuild  { or } monodevelop OpenSim.sln
+    
 
 Build the OpenSim project, run the unit tests,  configure the STANDALONE INI files as described @  ( [opensim config](http://opensimulator.org/wiki/Configuration) ) and  start the simulator.  While setting configuration options is not something that fits well in a recipe,  the following walkthrough highlights the minimal changes to get a standalone server up and running, and some optional setting changes we like to make.
 

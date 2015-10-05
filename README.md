@@ -66,7 +66,7 @@ Remember, you are user vagrant, password vagrant on each of the VM's.  The mySQL
 ### Build and Configure
 Log in to the DEV VM and connect to the base directory ( probably ~/opensimulator).
 
-    cd ~/gitclones/opensimulator/bin
+    cd ~/gitclones/opensimulator
     ./runprebuild.sh
     
     xbuild  { or } monodevelop OpenSim.sln

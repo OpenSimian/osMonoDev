@@ -3,7 +3,7 @@ Boxes
 =====
 
 ### Ubuntu
-#### Ubuntu Vivid Vervet 15.04 Server x86_64
+#### [dz0/vivid32srv](https://atlas.hashicorp.com/dz0/boxes/vivid32srv)      
 
 * VirtualBox Guest Additions 5.0.0
 * mySQL (server / client)
@@ -12,7 +12,7 @@ Boxes
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [dz0/ubuntu-15.04-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-15.04-server-amd64)                                                                                                                                                                                                                                                                                                                |
+| Atlas         |                                                                                                                                                                                                                                                                                                           |
 | Virtualbox    | [ubuntu-15.04-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA512SUM) |
 | VMWare Fusion | [ubuntu-15.04-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA512SUM)                 |
 

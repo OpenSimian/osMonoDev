@@ -3,6 +3,8 @@ Boxes
 =====
 OpenSimian uses the  Hashicorp  Packer utility to simplify the installation of osMonoDev.  We do our best to make sure that the Vagrant recipes we release are reliable, repeatable, and insure you can keep your configurations  up to date.
 
+Currently we only provide images built for the VitualBox provider of Packer.   The list below should reflect a mostly current catalog of the Opensimian boxes used in our osMonoDev package.
+
 
 
 ### Ubuntu

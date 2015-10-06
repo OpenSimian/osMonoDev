@@ -6,13 +6,13 @@ Boxes
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
 * VirtualBox Guest Additions 5.0.0
-* Chef 12.4.1-1
-* Ruby 1.9.3.194-8.1ubuntu2.1
-* Rubygems 2.4.8
+* mySQL (server / client)
+* Avahi (daemon / dnsconfd / discover / utils)
+* nmap
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/ubuntu-15.04-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-15.04-server-amd64)                                                                                                                                                                                                                                                                                                                |
+| Atlas         | [dz0/ubuntu-15.04-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-15.04-server-amd64)                                                                                                                                                                                                                                                                                                                |
 | Virtualbox    | [ubuntu-15.04-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA512SUM) |
 | VMWare Fusion | [ubuntu-15.04-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA512SUM)                 |
 

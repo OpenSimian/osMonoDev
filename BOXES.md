@@ -5,15 +5,16 @@ Boxes
 ### Ubuntu
 #### [dz0/vivid32srv](https://atlas.hashicorp.com/dz0/boxes/vivid32srv)      
 
-* VirtualBox Guest Additions 5.0.0
-* mySQL (server / client)
+* VirtualBox Guest Additions 5.0.4
+* mySQL (server (Ver 14.14 Distrib 5.6.25) / client) 
 * Avahi (daemon / dnsconfd / discover / utils)
 * nmap
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ubuntu        | [ubuntu-15.04-server-1386.iso](http://releases.ubuntu.com/15.04/ubuntu-15.04-server-i386.iso) [SHA256SUM](http://releases.ubuntu.com/15.04/SHA256SUMS)                                                                                                                                                                                                                                                                                                                                                                           |
-| VMWare Fusion | [ubuntu-15.04-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA512SUM)                 |
+| VirtualBox     |                                                                                                                                                                                                                                                                                                                                                                                                                  
+| MySQL          | [ubuntu-15.04-server-amd64_vmware.box](http://dev.mysql.com/downloads/file.php?id=458863) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA512SUM)                 |
 
 ---
 

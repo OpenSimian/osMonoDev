@@ -1,6 +1,9 @@
 
 Boxes
 =====
+OpenSimian uses the  Hashicorp  Packer utility to simplify the installation of osMonoDev.  We do our best to make sure that the Vagrant recipes we release are reliable, repeatable, and insure you can keep your configurations  up to date.
+
+
 
 ### Ubuntu
 #### [dz0/vivid32srv](https://atlas.hashicorp.com/dz0/boxes/vivid32srv)      

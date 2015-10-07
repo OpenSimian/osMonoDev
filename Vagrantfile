@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     db.vm.box = "dz0/vividSQLsrv32"
     db.vm.hostname = "mySQLsrv"
 
-    db.vm.network "private_network", ip: "192.168.50.4",nictype: "virtio"
+    db.vm.network "private_network", ip: "192.168.50.4"
     db.vm.provision :shell, path: "loadSQL.sh"
   end
 
@@ -33,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.box = "box-cutter/ubuntu1404-desktop"
     dev.vm.hostname = "osdev"
 
-    dev.vm.network "private_network", ip: "192.168.50.5",nictype: "virtio"
+    dev.vm.network "private_network", ip: "192.168.50.5"
     dev.vm.provision :shell, path: "loadDEV.sh"
     dev.vm.synced_folder "../gitclones", "/gitclones"
     dev.vm.synced_folder "../OSviewers", "/viewers"

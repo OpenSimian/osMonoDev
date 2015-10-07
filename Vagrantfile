@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #  configure mySQL database server VM and initialize with shell script 
   config.vm.define "db" do |db|
-    db.vm.box = "dz0/vivid32srv"
+    db.vm.box = "dz0/vividSQLsrv32"
     db.vm.hostname = "mySQLsrv"
 
     db.vm.network "private_network", ip: "192.168.50.4",nictype: "virtio"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 apt-key add /vagrant/mySQLgnuPGkey
 echo "deb http://repo.mysql.com/apt/ubuntu/ vivid mysql-5.6" > /etc/apt/sources.list.d/mysql.list
-dpkg -P mysql-server -y
+dpkg -P mysql-server
 
 echo " Installing MySQL..    check mysql.txt for log"
 apt-get install -y mysql-server

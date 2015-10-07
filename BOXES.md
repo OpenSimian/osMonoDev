@@ -11,7 +11,7 @@ Currently we only provide images built for the VitualBox provider of Packer.   T
 #### [dz0/vivid32srv](https://atlas.hashicorp.com/dz0/boxes/vivid32srv)      
 
 * VirtualBox Guest Additions 5.0.4
-* mySQL (server (Ver 14.14 Distrib 5.6.25) / client) 
+* mySQL (Ver 14.14 Distrib 5.6.25) (server / client) 
 * Avahi (daemon / dnsconfd / discover / utils)
 * nmap
 

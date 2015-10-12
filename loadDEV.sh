@@ -43,7 +43,7 @@ nant -help
 # git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
 
 # build the solution file
-cd /opensimulator
+cd /gitclones/opensimMaster
 ./runprebuild.sh
 
 # run nant build

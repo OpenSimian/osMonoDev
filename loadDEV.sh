@@ -50,4 +50,4 @@ cd /gitclones/opensimMaster
 nant
 
 # ensure access permissions
-chown -R vagrant /opensimulator
+chown -R vagrant /gitclones

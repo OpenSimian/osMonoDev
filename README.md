@@ -19,6 +19,25 @@ These instructions presume that the user has install rights on a current 64 bit 
 
 ### Install Packages on the host machine
 #### VirtualBox
+Ubuntu comes with VirtualBox installed, but it is not a current version.   
+
+VirtualBox requires the installation of kernel modules to manage resources for the virtual machines.
+In order to keep these modules up to date, it is recommended that you install DKMS.
+
+    sudo apt-get install dkms
+ 
+Add the oracle repositories to the /etc/apt/sources.list file.
+
+    sudo echo "deb http://download.virtualbox.org/virtualbox/debian vivid contrib" >> /etc/apt/sources.list
+ 
+According to your distribution, replace 'vivid' by 'utopic', 'trusty', 'raring', 'quantal', 'precise', 'lucid'.
+
+Retrieve and add the oracle public key for repository access, then update and install.
+    
+    wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get install virtualbox-5.0
+
  ( [Ubuntu Install Instructions](https://help.ubuntu.com/community/VirtualBox/Installation) )
 
 #### Vagrant

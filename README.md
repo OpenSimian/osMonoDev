@@ -2,7 +2,8 @@
 
 OsMonoDev is designed to simplify the creation of Ubuntu VM's configured to support the creation of a small OpenSimulator standalone grid.  It uses a Vagrant recipe to provision a Ubuntu desktop virtual machine loaded with monodevelop and a clone of any OpenSimulator branch.  It also configures an Ubuntu server configured as a MySQL server for any of the OpenSimulator servers started on the local network.
 
-osMonoDev currently requires the following freely available software.
+osMonoDev is designed to use the following freely available software.  
+
 * VirtualBox ( [www.virtualbox](https://www.virtualbox.org/) )
 * Vagrant ( [www.vagrantup](https://www.vagrantup.com/) )
 * Ubuntu Desktop & Server(LTS and current versions) ( [www.ubuntu](https://www.ubuntu.com/) )
@@ -18,10 +19,14 @@ osMonoDev currently requires the following freely available software.
 These instructions presume that the user has install rights on a current 64 bit machine (& OS) with multiple CPUs and enough memory/disk storage to support running 2 additional VM's.
 
 ### Install Packages on the host machine
-#### VirtualBox
-Ubuntu comes with VirtualBox installed, but it is not a current version.   
 
-VirtualBox requires the installation of kernel modules to manage resources for the virtual machines.
+Each of the packages that will be installed on the host machine offer cross platform compatability.
+The rest of these instructions assume you are installing on host machine with a current Ubuntu desktop release installed. 
+If your host machine is running OSx or Windows, follow the appropriate instructions found at the linked pages in each of the sections below.
+
+#### VirtualBox
+ 
+osMonoDev requires VirtualBox 5.0 or later. VirtualBox also requires the installation of kernel modules to manage resources for the virtual machines.
 In order to keep these modules up to date, it is recommended that you install DKMS.
 
     sudo apt-get install dkms

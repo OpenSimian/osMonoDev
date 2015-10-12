@@ -49,16 +49,19 @@ Retrieve and add the oracle public key for repository access, then update and in
 ### Setup the Vagrant Project Directory
 Vagrant with Virtualbox will create a shared directory where the  "Vagrant up" command is executed.
 OpenSimian uses the ~/VagrantBase directory as a home for all of its projects, but you can use what you like.
+There are a number of shared directories the virtual machine will expect.   Create them...
+
+    cd ~/VagrantBase
+    mkdir gitclones  ( for the opensim branches )
+    mkdir OSAssets   ( for opensim OAR and IAR files )
+    mkdir Viewers    ( for the viewer sources )
 
 ### Customize the branch of OpenSimulator
 The source code you will be working with is loaded on the host machine via git clone.
+The directory containing the .git file will be shared so both host and VM have access to the working/build base. 
+Execute the clone command in the ~/VagrantBase/gitclones directory to insure  proper  sharing.
 
-    cd ~/VagrantBase
-    mkdir gitclones
     cd gitclones
-
-The directory containing the .git file will be shared so both host and VM have access to the working/build base.  Execute the clone command in the ~/VagrantBase/gitclones directory to insure  proper  sharing.
-
     # clone the base OpenSimulator GIT repository ( uncomment the branch you want)
     # git clone -b master https://github.com/nebadon2025/opensimulator.git
     git clone -b 0.8.1-post-fixes https://github.com/nebadon2025/opensimulator.git
@@ -72,7 +75,6 @@ The examples allow you to clone the lastest production release [0.8.1-post-fixes
     git clone https://github.com/OpenSimian/osMonoDev.git  
 
 This will create a subdirectory called  osMonoDev
-
 
 ### Start the Virtual Machines
 

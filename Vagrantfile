@@ -12,6 +12,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # change the network card hardware for better performance
     vb.customize ["modifyvm", :id, "--nictype1", "virtio" ]
     vb.customize ["modifyvm", :id, "--nictype2", "virtio" ]
+    
+    vb.memory = 1024
+    vb.cpus = 2
 
     # suggested fix for slow network performance
     # see https://github.com/mitchellh/vagrant/issues/1807

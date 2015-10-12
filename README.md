@@ -25,6 +25,7 @@ The rest of these instructions assume you are installing on host machine with a 
 If your host machine is running OSx or Windows, follow the appropriate instructions found at the linked pages in each of the sections below.
 
 #### VirtualBox
+##### Ubuntu Desktop
  
 osMonoDev requires VirtualBox 5.0 or later. VirtualBox also requires the installation of kernel modules to manage resources for the virtual machines.
 In order to keep these modules up to date, it is recommended that you install DKMS.
@@ -42,8 +43,8 @@ Retrieve and add the oracle public key for repository access, then update and in
     wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
     sudo apt-get update
     sudo apt-get install virtualbox-5.0
-
- ( [Ubuntu Install Instructions](https://help.ubuntu.com/community/VirtualBox/Installation) )
+##### Other hosts
+ ( [VirtualBox Download & Install Instructions](https://www.virtualbox.org/wiki/Downloads) )
 
 #### Vagrant
  ( [Vagrant Download](http://www.vagrantup.com/downloads) )

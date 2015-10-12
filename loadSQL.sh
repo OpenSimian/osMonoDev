@@ -1,18 +1,9 @@
 #!/usr/bin/env bash
-apt-key add /vagrant/mySQLgnuPGkey
-echo "deb http://repo.mysql.com/apt/ubuntu/ vivid mysql-5.6" > /etc/apt/sources.list.d/mysql.list
-dpkg -P mysql-server
-
-echo " Installing MySQL..    check mysql.txt for log"
-apt-get install -y mysql-server
-
-
-echo " Installing MySQL ports and changing bind address..    check mysql.txt for log"
-/sbin/iptables  -I INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
-/sbin/iptables  -I OUTPUT -p tcp --sport 3306 -m state --state ESTABLISHED -j ACCEPT
-
-echo "[mysqld]" >> /etc/mysql/my.cnf
-echo "bind-address = $DBBIND" >> /etc/mysql/my.cnf
+# Variables
+DBBIND=::
+DBNAME=opensim
+DBUSER=osUser
+DBPASSWD=0p3ns1m1an
 
 service mysql stop 
 

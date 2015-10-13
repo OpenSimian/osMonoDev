@@ -14,7 +14,8 @@ mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'%' identified by '$DBPASSWD'"
 mysql -uroot -p$DBPASSWD -e "FLUSH PRIVILEGES;"
 
+echo -e "\n--- Restarting avahi-daemon service for discovery ---\n"
 service avahi-daemon stop
 service avahi-daemon start
 
-/usr/sbin/mysqld --help --verbose
+

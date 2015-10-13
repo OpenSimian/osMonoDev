@@ -51,3 +51,6 @@ nant
 
 # ensure access permissions
 chown -R vagrant /gitclones
+
+/sbin/iptables  -I INPUT -p udp --dport 9000 -m state --state NEW,ESTABLISHED -j ACCEPT
+/sbin/iptables  -I OUTPUT -p udp --sport 9000 -m state --state ESTABLISHED -j ACCEPT

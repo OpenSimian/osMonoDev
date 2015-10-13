@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--nictype1", "virtio" ]
     vb.customize ["modifyvm", :id, "--nictype2", "virtio" ]
     
-    vb.memory = 1024
+    vb.memory = 2048
     vb.cpus = 2
 
     # suggested fix for slow network performance
